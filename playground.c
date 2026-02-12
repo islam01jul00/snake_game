@@ -83,7 +83,7 @@ void render_playground(playground_t *playground)
 
 	if (!status.game_over)
 	{
-		system("clear");
+		printf("\033[H");
 
 		print_number(status.score);
 

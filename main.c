@@ -15,6 +15,8 @@ int main(void)
 	if (init_playground(&playground))
 		exit(EXIT_FAILURE);
 
+	printf("\033[?25l"); /* hide cursor */
+
 	terminal_row_mode();
 
 	if (pthread_create(&keys_thread, NULL, &keys_handler, (void *) &playground) != 0)
@@ -30,6 +32,8 @@ int main(void)
 	free_points(playground.snake.head);
 
 	system("clear");
+
+	printf("\033[?25h"); /* show cursor */
 
 	return (EXIT_SUCCESS);
 }
