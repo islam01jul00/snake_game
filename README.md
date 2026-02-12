@@ -1,7 +1,5 @@
 # snake_game
 
-![alt text](https://github.com/ihhg172000/snake_game/blob/main/screenshots/screenshot_1.png?raw=true)
-
 ## Description
 
 A classic Snake game implementation in C for the terminal. Navigate the snake to eat food, grow longer, and achieve the highest score without hitting the walls or yourself.
@@ -45,6 +43,7 @@ A classic Snake game implementation in C for the terminal. Navigate the snake to
 ### Rendering
 
 - **Termios**: The terminal is switched to non-canonical mode (raw mode) to capture input immediately without pressing Enter.
+
 - **Double Buffering Simulation**: To avoid flickering, `system("clear")` was replaced with ANSI escape codes (`\033[H`) to reset the cursor position and overwrite the screen buffer, providing a smoother visual experience.
 
 ## How to Run
